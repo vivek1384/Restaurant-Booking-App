@@ -2,6 +2,8 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
+This Web Page is not responsive so don't try to use it in other device then laptop or PC. Your contribution will be appreciated.
+
 ## Development server
 
 To start a local development server, run:
