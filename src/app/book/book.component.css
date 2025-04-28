@@ -1,0 +1,146 @@
+.header{
+    height: calc(7vh - 2px);
+    background: rgb(252, 241, 225);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header h1{
+    margin: 0;
+    padding-top: 5px;
+    margin-left: 2rem;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    background: rgb(252, 241, 225);
+    height: 93vh;
+}
+button{
+    outline: none;
+}
+
+hr{
+    border: 1px solid rgb(63, 21, 21);
+    margin: 0;
+}
+
+.container .left{
+    width: 50%;
+    padding-top: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.container .left::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Edge */
+  }
+
+.container .left .header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.container .left .header h3{
+    margin: 0;
+    /* margin-left: 4rem;    */
+    font-size: 24px;
+}
+
+
+.container button{
+    background: transparent;
+    margin-left: 12px;
+    padding: 5px 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.search button{
+    background: transparent;
+    margin-left: 12px;
+    padding: 5px 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.container button:hover{
+    color: rgb(252, 241, 225);
+    background: rgb(63, 21, 21);
+}
+
+.search button:hover{
+    color: rgb(252, 241, 225);
+    background: rgb(63, 21, 21);
+}
+
+.container .right{
+    width: 50%;
+}
+
+.container .right input{
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(63, 21, 21);
+    text-align: center;
+    width: 80%;
+    margin: 2rem 4.5rem;
+    font-size: 17px;
+    color: rgb(63, 21, 21);
+}
+
+.container .right .available{
+    height: calc(76vh + 10px);
+    margin-top: 2rem;
+    overflow-y: scroll;
+}
+
+.container .right .available::-webkit-scrollbar{
+    display: none;
+}
+
+.search{
+    position: absolute;
+    top: 144px;
+    right: 0;
+    width: 50%;
+    height: calc(80vh - 5px);
+    backdrop-filter: blur(20px);
+    padding-top: 15px;
+
+}
+
+.card{
+    width: 80%;
+    margin: auto;
+    border: 2px solid rgb(63, 21, 21);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0rem 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card-header h1{
+    margin: 0;
+}
+
+.card-body{
+    padding-top: 22px;
+}
+.card-body p{
+    margin: 0;
+}

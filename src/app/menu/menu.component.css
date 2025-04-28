@@ -1,0 +1,113 @@
+button{
+    cursor: pointer;
+}
+header {
+    background: rgb(252, 241, 225);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header .left {
+    padding: 8px;
+    padding-left: 26px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+hr {
+    margin: 0;
+    border: 1px solid rgb(63, 21, 21);
+}
+
+.container {
+    background: rgb(252, 241, 225);
+    width: 97.8vw;
+    height: 90vh;
+    color: rgb(63, 21, 21);
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+
+.container h1{
+    margin: 0;
+}
+
+.container .left{
+    width: 50%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.container .right{
+    width: 50%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.container .left .card{
+    border: 2px solid rgb(63, 21, 21);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container .left .card h2{
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.container .left .card p{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.container .left .card button{
+    background: transparent;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 5px 17px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: none;
+    border: 2px solid rgb(63, 21, 21);
+}
+.container .right .card{
+    border: 2px solid rgb(63, 21, 21);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container .right .card h2{
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.container .right .card p{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.container .right .card button{
+    background: transparent;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 5px 17px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: none;
+    border: 2px solid rgb(63, 21, 21);
+}

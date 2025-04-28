@@ -1,0 +1,35 @@
+<header>
+    <div class="left" routerLink="/home">Restaurant</div>
+</header>
+<hr>
+<div class="container">
+    <div class="left">
+        <h1>Menu : </h1>
+        @for (item of itemList; track $index) {
+        <div class="card">
+            <div>
+                <h2>Item name : {{item.name}}</h2>
+                <p>Price : <strong> ₹{{item.price}}</strong></p>
+            </div>
+            <div>
+                <button (click)="addTofav(item)">Add to favourite</button>
+            </div>
+        </div>
+        }
+
+    </div>
+    <div class="right">
+        <h1>Favourites : </h1>
+        @for (item of favList; track $index) {
+        <div class="card">
+            <div>
+                <h2>Item name : {{item.name}}</h2>
+                <p>Price : <strong> ₹{{item.price}}</strong></p>
+            </div>
+            <div>
+                <button (click)="remove(item.id)">Remove to favourite</button>
+            </div>
+        </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<header>
+    <h2 routerLink="/home">Restaurant</h2>
+    <h2 routerLink="/special-booking">Your Ocassions</h2>
+</header>
+<hr>
+
+<div class="container">
+    @for (item of ocsList; track $index) {
+        <div class="card">
+            <div class="card-header">
+                <h1>{{item.data.name}}</h1>
+                <h2>Ocassion Id : {{item.id}}</h2>
+            </div>
+            <div class="card-body">
+                <p>Time : {{item.data.time}}</p>
+                <p>Person : {{item.data.person}}</p>
+                <p>Date : {{item.data.date}}</p>
+            </div>
+        </div>
+        }
+</div>

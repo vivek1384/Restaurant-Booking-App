@@ -1,0 +1,137 @@
+header {
+    background: rgb(252, 241, 225);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header .left {
+    padding: 8px;
+    padding-left: 26px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+header .right {
+    padding: 8px;
+    padding-right: 26px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+hr {
+    margin: 0;
+    border: 1px solid rgb(63, 21, 21);
+}
+
+.container {
+    background: rgb(252, 241, 225);
+    width: 97.8vw;
+    height: 90vh;
+    padding: 1rem;
+    color: rgb(63, 21, 21);
+}
+
+.card{
+    width: 70%;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 2px solid rgb(63, 21, 21);
+}
+
+.card .card-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-header h1{
+    margin: 0;
+    font-size: 30px;
+}
+.card-header h2{
+    margin: 0;
+    font-size: 20px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-body button{
+    background: transparent;
+    color: rgb(63, 21, 21);
+    font-size: 15px;
+    font-weight: bold;
+    padding: 4px 18px;
+    border: none;
+    cursor: pointer;
+    border: 2px solid rgb(63, 21, 21);
+}
+
+.card-body button:hover{
+    color: rgb(252, 241, 225);
+    background: rgb(63, 21, 21);
+}
+
+.card-body p {
+    margin: 5px;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.form{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+}
+
+form{
+    width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    gap: 1rem;
+}
+
+form select, textarea{
+    font-size: 17px;
+    padding: 8px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(63, 21, 21);
+}
+
+
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.buttons button{
+    width: 50%;
+    background: transparent;
+    margin-top: 10px;
+    padding: 8px;
+    font-size: 17px;
+    border: none;
+    border: 2px solid rgb(63, 21, 21);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buttons button:hover{
+    color: rgb(252, 241, 225);
+    background: rgb(63, 21, 21);
+}

@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="form">
+        <form action="">
+            <h1>Add New table / <span routerLink="/book">See all</span></h1>
+            <input type="text" placeholder="Table name" [(ngModel)]="tableData.name" name="name">
+            <input type="number" placeholder="Enter a Person" [(ngModel)]="tableData.person" name="person">
+            <select name="lord" id="" (change)="onChange(tableData.lord)" [(ngModel)]="tableData.lord">
+                <option value="" selected disabled hidden>Select lunch or Dinner</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+            </select>
+            <select name="time" id="" [(ngModel)]="tableData.time">
+                <option value="" selected disabled hidden>Select Time</option>
+                @for (item of timeList3; track $index) {
+                <option value={{item}}>{{item}}</option>
+                }
+            </select>
+            <select name="time" id="" [(ngModel)]="tableData.date">
+                <option value="" selected disabled hidden>Select date</option>
+                <option value="2025-03-03">2025-03-03</option>
+                <option value="2025-03-04">2025-03-04</option>
+
+            </select>
+            <button (click)="addTable(tableData)">Submit</button>
+        </form>
+        <form action="">
+            <h1>Add New Special Ocassion / <span routerLink="/special-book-admin">See all</span></h1>
+            <input type="text" placeholder="Ocassion name" [(ngModel)]="ocassionData.name" name="name">
+            <input type="number" placeholder="Enter a Person" [(ngModel)]="ocassionData.person" name="person">
+            <select name="lord" id="" (change)="onChange(tableData.lord)" [(ngModel)]="ocassionData.time">
+                <option value="" selected disabled hidden>Select Time</option>
+                <option value="Afternoon">Afternoon</option>
+                <option value="Evening">Evening</option>
+            </select>
+            <select name="time" id="" [(ngModel)]="ocassionData.date">
+                <option value="" selected disabled hidden>Select Date</option>
+                <option value="2025-03-03">2025-03-03</option>
+                <option value="2025-03-04">2025-03-04</option>H
+            </select>
+            <button (click)="addOcassion(ocassionData)">Submit</button>
+        </form>
+    </div>
+    <div class="fav">
+        <form action="">
+            <h1>Add New Item</h1>
+            <input type="text" placeholder="Item name" [(ngModel)]="menuData.name" name="name">
+            <input type="number" placeholder="Enter a Price" [(ngModel)]="menuData.price" name="price">
+           
+            <button (click)="addItem(menuData)">Submit</button>
+        </form>
+
+    </div>
+</div>

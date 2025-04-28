@@ -1,0 +1,160 @@
+.header{
+    height: calc(7vh - 2px);
+    background: rgb(252, 241, 225);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+button{
+    cursor: pointer;
+}
+
+.header h1{
+    margin: 0;
+    padding-top: 5px;
+    margin-left: 2rem;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+hr{
+    border: 1px solid rgb(63, 21, 21);
+    margin: 0;
+}
+
+.container{
+    height: calc(93vh - 2rem);
+    background: rgb(252, 241, 225);
+    padding: 1rem;
+}
+
+.container .grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 2rem;
+}
+
+.grid .card{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(63, 21, 21);
+    padding: 1rem;
+}
+.grid .card .card-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.grid .card .card-header h1{
+    margin: 0;
+    font-size: 25px;
+}
+.grid .card .card-header h3{
+    margin: 0;
+    margin-top: 8px;
+}
+
+.grid .card .card-body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.grid .card p{
+    margin: 0;
+}
+
+.grid .card .card-body .first p{
+    margin: 5px;
+}
+.grid .card .card-body .second p{
+    margin: 5px;
+    text-align: end;
+}
+.grid .card .card-body button{
+    background: transparent;
+    font-size: 15px;
+    padding: 3px 35px;
+}
+
+.search2{
+    margin-top: 10px;
+    margin-right: 2rem;
+}
+
+.search2 input{
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(63, 21, 21);
+    text-align: center;
+    width: 100%;
+    margin: 5px auto;
+    font-size: 17px;
+    color: rgb(63, 21, 21);
+}
+
+
+.search{
+    position: absolute;
+    top: 52px;
+    right: 0;
+    width: 50%;
+    height: calc(80vh - 5px);
+    backdrop-filter: blur(20px);
+    padding-top: 15px;
+
+}
+
+.search .card{
+    width: 80%;
+    margin: auto;
+    border: 2px solid rgb(63, 21, 21);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0rem 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.search .card-header h1{
+    margin: 0;
+}
+
+.search .card-header p{
+    margin-top: -1rem;
+}
+
+.search .card-body{
+    padding-top: 22px;
+}
+.search .card-body p{
+    margin: 0;
+}
+
+.search .card-header p span{
+    text-decoration: underline;
+    color: rgb(243, 103, 103);
+}
+
+.search button{
+    background: transparent;
+    margin-left: 0px;
+    padding: 5px 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.search button:hover{
+    color: rgb(252, 241, 225);
+    background: rgb(63, 21, 21);
+}
+
+.card-body .second p strong span{
+    text-decoration: underline;
+    color: rgb(243, 103, 103);
+}
+

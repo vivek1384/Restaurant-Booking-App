@@ -1,0 +1,336 @@
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+button{
+    cursor: pointer;
+}
+hr{
+    border:1px solid rgb(63, 21, 21);
+}
+header {
+    background: rgb(252, 241, 225);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header .left {
+    padding: 8px;
+    padding-left: 26px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+header .right {
+    padding: 8px;
+    padding-right: 26px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+header .right span {
+    margin-left: 2rem;
+}
+
+hr {
+    margin: 0;
+}
+
+.container {
+    background: rgb(252, 241, 225);
+    width: calc(97.8vw - 0rem);
+    height: 57vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    color: rgb(63, 21, 21);
+}
+
+.container .left {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .left h1 {
+    margin: 0;
+}
+
+.container .left h2 {
+    margin: 12px;
+}
+
+.container .left h2 span {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.container .left h3 {
+    margin: 12px;
+}
+
+.container .left h3 span {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+.container .left .top .grid {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.container .left .top .grid p {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 2px solid rgb(63, 21, 21);
+}
+
+.container .left .top .grid p:hover {
+    background: rgb(63, 21, 21);
+    color: rgb(252, 241, 225);
+}
+
+.left .bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left .bottom h2{
+    width: 15%
+}
+
+.left .bottom select{
+    width: 85%;
+    background: transparent;
+    outline: none;
+    border: none;
+    margin-top: 5px;
+    font-size: 17px;
+    font-weight: bold;
+    border-bottom: 2px solid rgb(63, 21, 21);
+}
+
+.container .left .button {
+    background: transparent;
+    padding: 10px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid rgb(63, 21, 21);
+    margin-left: 278px;
+    cursor: pointer;
+}
+
+.container .left .bottom .button:hover {
+    background: rgb(63, 21, 21);
+    color: rgb(252, 241, 225);
+}
+
+
+.container .right {
+    width: 70%;
+    height: 58vh;
+    overflow-y: scroll;
+}
+
+.container .right h1{
+    margin: 0;
+    margin-left: 1rem;
+}
+
+.container .right h4 {
+    text-align: center;
+}
+
+.container .right h4 button{
+    margin-left: 12px;
+    border: 2px solid rgb(63, 21, 21);
+    background: transparent;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.container .right .grid {
+    display: grid;
+    grid-template-columns: auto auto auto ;
+}
+
+.container .right .grid .table {
+    margin: 1rem;
+    border: 2px solid rgb(63, 21, 21);
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.container .right .grid .table span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.show {
+    position: absolute;
+    width: 26vw;
+    height: 30vh;
+    right: 0;
+    top: 114px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+}
+
+.show form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+.show form input {
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(63, 21, 21);
+    color: rgb(63, 21, 21);
+    padding: 5px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.show form input::placeholder {
+    color: rgb(63, 21, 21);
+    opacity: 0.7;
+}
+
+.show form button {
+    width: 60%;
+    margin: auto;
+    padding: 5px;
+    font-size: 17px;
+    font-weight: bold;
+    background: transparent;
+    border: 2px solid rgb(63, 21, 21);
+    color: rgb(63, 21, 21);
+    margin-top: 10px;
+}
+
+.show2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width : 100vw;
+    backdrop-filter: blur(10px);
+}
+
+.show2 form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+    margin-top: 8rem;
+}
+
+.show2 form h1{
+    text-align: center;
+}
+
+.show2 form input, textarea {
+    background: transparent;
+    width: 60%;
+    margin: auto;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(63, 21, 21);
+    color: rgb(63, 21, 21);
+    padding: 5px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.show2 form input::placeholder, textarea::placeholder {
+    color: rgb(63, 21, 21);
+    opacity: 0.7;
+}
+
+.show2 form .buttons{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.show2 form button {
+    width: 50%;
+    margin: auto;
+    padding: 5px;
+    font-size: 17px;
+    font-weight: bold;
+    background: transparent;
+    border: 2px solid rgb(63, 21, 21);
+    color: rgb(63, 21, 21);
+    margin-top: 10px;
+}
+
+.review2{
+    font-size: 18px;
+    padding: 0px;
+    color: rgb(252, 241, 225);
+    background: rgb(63, 21, 21);
+    /* width: 100vw; */
+    margin: auto;
+    padding-left: 0;
+}
+
+.review{
+    height: calc(30vh - 3rem);
+    background: rgb(252, 241, 225);
+    width: calc(100vw - 2rem);
+    padding: 1rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.review .card{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(63, 21, 21);
+    padding: 1rem;
+    width: 33%;
+}
+
+.review .card h1{
+    margin: 0;
+    margin-left: 6px;
+}
+
+.review .card .info{
+    display: flex;
+    flex-direction: column;
+}
+.review .card .info h3{
+    margin: 6px;
+    font-weight: 500;
+}

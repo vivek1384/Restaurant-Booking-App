@@ -1,0 +1,28 @@
+@if(isLogin){
+<div class="container">
+    <div class="buttons">
+        <button class="active">Log In</button>
+        <button (click)="onClick()">Sign Up</button>
+    </div>
+    <form action="">
+        <input type="text" name="email"  placeholder="Enter Email" [(ngModel)]="user.email">
+        <input type="text" name="password"  placeholder="Enter Password" [(ngModel)]="user.password">
+        <button (click)="onLogin(user.email, user.password)">Log In</button>
+    </form>
+</div>
+}
+@else{
+    <div class="container">
+        <div class="buttons">
+            <button (click)="onClick()">Log In</button>
+            <button class="active">Sign Up</button>
+        </div>
+        <form action="">
+            <input type="text" name="name"  placeholder="Enter Name" [(ngModel)]="user.name">
+            <input type="text" name="email"  placeholder="Enter Email" [(ngModel)]="user.email">
+            <input type="text" name="password"  placeholder="Enter Password" [(ngModel)]="user.password">
+            <button (click)="onSignUp(user)">Sign Up</button>
+        </form>
+    </div>
+
+}

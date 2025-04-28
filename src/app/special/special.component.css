@@ -1,0 +1,151 @@
+header {
+    background: rgb(252, 241, 225);
+    color: rgb(63, 21, 21);
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    cursor: pointer;
+}
+
+header h2 {
+    margin: 0;
+    padding: 8px 1rem;
+    cursor: pointer;
+    width: 170px;
+}
+
+hr {
+    margin: 0;
+    border: 1px solid rgb(63, 21, 21);
+}
+
+.container {
+    height: calc(94vh + 2px);
+    background: rgb(252, 241, 225);
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.left {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border: 2px solid rgb(63, 21, 21);
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.card .card-header {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card .card-header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.card .card-header button {
+    background: transparent;
+    font-size: 18px;
+    padding: 8px;
+    font-weight: bold;
+    border: 2px solid rgb(63, 21, 21);
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.card .card-body {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    text-align: end;
+}
+
+.card .card-body p {
+    font-size: 17px;
+    margin: auto;
+    font-weight: bold;
+}
+
+.card .card-body select {
+    font-size: 14px;
+    width: 170px;
+    margin: auto;
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(63, 21, 21);
+}
+
+.right .grid{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.right .card{
+    margin: 1rem;
+}
+
+
+.show {
+    position: absolute;
+    width: 26vw;
+    height: 30vh;
+    right: 0;
+    top: 44px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+}
+
+.show form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+form input {
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(63, 21, 21);
+    color: rgb(63, 21, 21);
+    padding: 5px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+form input::placeholder {
+    color: rgb(63, 21, 21);
+    opacity: 0.7;
+}
+
+form button {
+    width: 60%;
+    margin: auto;
+    padding: 5px;
+    font-size: 17px;
+    font-weight: bold;
+    background: transparent;
+    border: 2px solid rgb(63, 21, 21);
+    color: rgb(63, 21, 21);
+    margin-top: 10px;
+}

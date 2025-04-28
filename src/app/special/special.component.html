@@ -1,0 +1,62 @@
+<header>
+    <h2 routerLink="/home">Restaurant</h2>
+    <h2 routerLink="/special-booking">Your Ocassions</h2>
+</header>
+<hr>
+<div class="container">
+    <div class="left">
+
+        <div class="card">
+            <div class="card-header">
+                <h1>Birthday Celebration</h1>
+                <button (click)="getPartiList(name1)">Book Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h1>Wedding Celebration</h1>
+                <button (click)="getPartiList(name2)">Book Now</button>
+            </div>
+
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h1>Engagement Celebration</h1>
+                <button (click)="getPartiList(name3)">Book Now</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="right">
+        <h1>Available Booking for Special Ocassions : </h1>
+        <div class="grid">
+            @for (item of dataList2; track $index) {
+            <div class="card" [ngStyle]="{'text-decoration': item.booked ? 'line-through' : ''}" (click)="booking(item)">
+                <div class="card-header">
+                    <h1>{{item.name}} Celebration</h1>
+                </div>
+                <div class="card-body">
+                    <p>Time : {{item.time}}</p>
+                    <p>Person : {{item.person}}</p>
+                    <p>Date : {{item.date}}</p>
+                </div>
+            </div>
+            }
+
+        </div>
+    </div>
+
+
+</div>
+
+@if(isShow){
+    <div class="show">
+        <form action="">
+            <input type="text" name="name" placeholder="Enter your name" [(ngModel)]="ocsBooking.name">
+            <input type="number" name="mono" [(ngModel)]="ocsBooking.mono" placeholder="Enter your Mobile No.">
+            <button (click)="onBooked(ocsBooking)">Book Ocassion</button>
+            <button (click)="blur(ocsBooking)">Close</button>
+        </form>
+    </div>
+    }

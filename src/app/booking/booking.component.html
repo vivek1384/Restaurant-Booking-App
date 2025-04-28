@@ -1,0 +1,62 @@
+<header>
+    <div class="left" routerLink="/home">Restaurant</div>
+    <!-- <div class="right" routerLink="/book-table">Your Tables</div> -->
+</header>
+<hr>
+<div class="container">
+    @for (item of tableList; track $index) {
+    <div class="card">
+        <div class="card-header">
+            <h1>{{item.table.name}}</h1>
+            <h2>Table Id : {{item.id}}</h2>
+        </div>
+        <div class="card-body">
+            <div>
+                <p>Lunch or Dinner : {{item.table.lord}}</p>
+                <p>Time : {{item.table.time}}</p>
+                <p>Person : {{item.table.person}}</p>
+                <p>Date : {{item.table.date}}</p>
+            </div>
+            <div>
+                @if(item.preOrdered){
+                <button>Already Pre-Ordered..</button>
+                }@else {
+                <button
+                    (click)="preOrder(item.id, item.userId, item.table.time, item.table.date, item.name, item.table.person, item)">Pre-order
+                    something...</button>
+                }
+            </div>
+        </div>
+    </div>
+    }
+</div>
+
+@if(isShow){
+<div class="form">
+    <form action="">
+        <select type="text" [(ngModel)]="orederData.item1" name="item1">
+            <option value="" selected disabled hidden>Choose item from our menu</option>
+            @for (item of allItems; track $index) {
+                <option value={{item.name}}>{{item.name}}</option>
+            }
+        </select>
+        <select type="text" [(ngModel)]="orederData.item2" name="item2">
+            <option value="" selected disabled hidden>Try something new</option>
+            <option value="Item 0031">Item 0021</option>
+            <option value="Item 0032">Item 0022</option>
+            <option value="Item 003">Item 0023</option>
+        </select>
+        <select type="text" [(ngModel)]="orederData.item3" name="item3">
+            <option value="" selected disabled hidden>Choose from your favourites</option>
+            @for (item of favItems; track $index) {
+                <option value={{item.name}}>{{item.name}}</option>
+            }
+        </select>
+        <textarea type="text" [(ngModel)]="orederData.desc" name="desc" placeholder="Additional tips"></textarea>
+        <div class="buttons">
+            <button (click)="preOrder2(orederData)">Pre Order</button>
+            <button (click)="close()">Close</button>
+        </div>
+    </form>
+</div>
+}

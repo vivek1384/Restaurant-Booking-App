@@ -1,0 +1,104 @@
+<header>
+    <div class="left" routerLink="/home">Restaurant</div>
+    <div class="right"><span routerLink="/menu">Menu</span><span routerLink="/special">Special Bookings</span><span
+            routerLink="/book-table">Your Tables </span> <span>{{userName}}</span> <span (click)="logOut()">Log
+            Out</span></div>
+</header>
+<hr>
+<div class="container">
+    <div class="left">
+        <div class="bottom">
+            <h2>Date : </h2>
+            <select name="" id="" [(ngModel)]="tableDate" (change)="ondate(tableDate)">
+                <option value="2025-03-03">03-03-2025</option>
+                <option value="2025-03-04">04-03-2025</option>
+            </select>
+            <!-- <input type="date" name="" id="" (change)="ondate()" [(ngModel)]="tableDate"> -->
+        </div>
+        <div class="top">
+            @if(lorD == "Lunch"){
+            <h2>Lunch / <span (click)="onClick()">Dinner</span></h2>
+
+            <div class="grid">
+                @for (item of timeList1; track $index) {
+                <p (click)="onTimeClick(item)">{{item}}</p>
+                }
+            </div>
+
+            }@else{
+            <h2>Dinner / <span (click)="onClick()">Lunch</span></h2>
+
+            <div class="grid">
+                @for (item of timeList2; track $index) {
+                <p (click)="onTimeClick(item)">{{item}}</p>
+                }
+            </div>
+
+            }
+        </div>
+
+    </div>
+    <div class="right">
+
+        <h1>Available Table : </h1>
+        <div class="grid">
+            @for (item of avalTable; track $index) {
+            <div class="table" (click)="booking(item)"
+                [ngStyle]="{'text-decoration': item.booked ? 'line-through' : ''}"> Table Name : {{item.name}} <span>
+                    Person : <strong>{{item.person}}</strong></span> <span> Time : {{item.time}}</span> <span> Lunch or
+                    Dinner : {{item.lord}}</span> <span>Date : {{item.date}}</span></div>
+            }
+
+        </div>
+    </div>
+</div>
+
+@if(isShow){
+<div class="show">
+    <form action="">
+        <input type="text" name="name" placeholder="Enter your name" [(ngModel)]="tabBooking.name">
+        <input type="number" name="mono" [(ngModel)]="tabBooking.mono" placeholder="Enter your Mobile No.">
+        <button (click)="onBooked(tabBooking)">Book Table</button>
+        <button (click)="blur(tabBooking)">Close</button>
+    </form>
+</div>
+}
+
+@if(isOpen){
+<div class="show2">
+    <form action="">
+        <h1>Please Rate Us!</h1>
+        <input type="text" name="userName" [(ngModel)]="review.userName" placeholder="Enter your name">
+        <input type="number" name="rating" placeholder="Enter Ratings (1 to 5)" [(ngModel)]="review.rating">
+        <textarea type="text" name="review" [(ngModel)]="review.review" placeholder="Enter Review"></textarea>
+        <div class="buttons">
+            <button (click)="submitReview(review)">Submit review</button>
+            <button (click)="close()">Close</button>
+        </div>
+    </form>
+</div>
+
+}
+<hr>
+<div class="review2">
+    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Review &nbsp;Review &nbsp;Review &nbsp;Review &nbsp;Review &nbsp;Review &nbsp;Review &nbsp;Review &nbsp;Review
+    &nbsp;Review &nbsp;Review &nbsp;Review &nbsp;Review &nbsp;Review &nbsp;Review &nbsp;Review &nbsp;Review &nbsp;Review
+    &nbsp;Review &nbsp;Review &nbsp;Review &nbsp;Review &nbsp;Review &nbsp;
+</div>
+<div class="review">
+    @for (item of reveiwList; track $index) {
+    <div class="card">
+        <h1>{{item.userName}}</h1>
+        <div class="info">
+            <h3>Rating : <fa-icon [icon]="icon"></fa-icon>
+                <fa-icon [icon]="icon"></fa-icon>
+                <fa-icon [icon]="icon"></fa-icon>
+                <fa-icon [icon]="icon"></fa-icon>
+                <fa-icon [icon]="icon"></fa-icon>
+            </h3>
+            <h3> Reveiw : <strong>{{item.review}}</strong> </h3>
+        </div>
+    </div>
+    }
+
+</div>

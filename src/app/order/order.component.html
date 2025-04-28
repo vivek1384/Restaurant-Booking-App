@@ -1,0 +1,62 @@
+<div class="header">
+    <h1 routerLink="/admin">Admin</h1>
+    <div class="search2">
+        <input type="text" placeholder="Search order by ID" [(ngModel)]="inputText"
+        (keyup)="onChange()" (blur)="onChange2()">
+    </div>
+</div>
+
+<hr>
+
+<div class="container">
+
+    <div class="grid">
+
+        @for (item of dataList; track $index) {
+            <div class="card">
+                <div class="card-header">
+                    <h1>Name : {{item.name}}</h1>
+                    <h3>Table Id: {{item.tableId}}</h3>
+                </div>
+                <div class="card-body">
+                    <div class="first">
+                        <p>Item 1 : <strong>{{item.item1}}</strong></p>
+                        <p>Item 2 : <strong>{{item.item2}}</strong></p>
+                        <p>Item 3 : <strong>{{item.item3}}</strong></p>
+                        <!-- <p>Item 4 : <strong>{{item.item4}}</strong></p> -->
+                        <button (click)="cancel(item.id, item)">Cancel</button>
+                    </div>
+                    <div class="second">
+                        <p>Person : <strong>{{item.person}}</strong></p>
+                        <p>Table name : <strong>{{item.table.table.name}}</strong></p>
+                        <p>Time : <strong>{{item.time}}</strong></p>
+                        <p>Date : <strong>{{item.date}}</strong></p>
+                        <p>Description : <strong><span>{{item.desc}}</span></strong></p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@if(onInput){
+    <div class="search">
+        @for (item of bookedTable; track $index) {
+        <div class="card">
+            <div class="card-header">
+                <h2>Name : {{item.table.name}}</h2>
+                <p>Description : <strong><span>{{item.desc}}</span></strong></p>
+                <button (mousedown)="cancel(item.id, item)" >Cancel</button>
+            </div>
+            <div class="card-body">
+                <p>Table Name : <strong>{{item.table.table.name}}</strong></p>
+                <p><strong>{{item.item1}} | {{item.item2}}</strong></p>
+                <!-- <p><strong>{{item.item3}} | {{item.item4}}</strong></p> -->
+                <p>Person : <strong>{{item.person}}</strong></p>
+                <p>Time : <strong>{{item.time}}</strong></p>
+                <p>Date : <strong>{{item.date}}</strong></p>
+            </div>
+        </div>
+        }
+    </div>
+    }

@@ -1,0 +1,56 @@
+.container {
+    width: 30%;
+    margin: auto;
+    margin-top: 10rem;
+    padding: 2rem;
+    border: 2px solid rgb(63, 21, 21);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.buttons button {
+    width: 50%;
+    border: none;
+    background: transparent;
+    border: 2px solid rgb(63, 21, 21);
+    font-size: 18px;
+    padding: 6px;
+    font-weight: bold;
+}
+
+.buttons .active{
+    background: rgb(63, 21, 21);
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+input {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(63, 21, 21);
+    padding: 6px;
+    padding-left: 15px;
+    font-size: 15px;
+}
+
+form button{
+    width: 50%;
+    margin: auto;
+    margin-top: 16px;
+    background: transparent;
+    border: 2px solid rgb(63, 21, 21);
+    font-size: 18px;
+    padding: 6px;
+    font-weight: bold;
+}

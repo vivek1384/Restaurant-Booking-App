@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+*{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+option:checked {
+    background-color: rgb(63, 21, 21); 
+    color: rgb(252, 241, 225);
+    /* Or any color you prefer */
+}
+
+option:hover{
+    cursor: pointer;
+    background: rgb(63, 21, 21);
+}
