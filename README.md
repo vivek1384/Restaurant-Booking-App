@@ -10,6 +10,20 @@ To start a local development server, run:
 ng serve
 ```
 
+## Json-Server
+
+To run the Json-Server
+
+```bash
+npm i -g json-server
+json-server --watch db.json
+```
+
+## Start
+
+for admin panel login use email "vivekdudhatra@13gmail.com" and password as "4321".
+
+
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
 ## Code scaffolding
